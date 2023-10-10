@@ -158,3 +158,29 @@
     ></div>
   </div>
 </div>
+
+<h3>Form</h3>
+<form class="form" #registerForm="ngForm" (ngSubmit)="onRegister()">
+  <label>
+    <input
+      placeholder="Email"
+      type="email"
+      name="email"
+      required
+      [(ngModel)]="register.email"
+    />
+    <span class="helper-text"> Error el campo email es requerido </span>
+  </label>
+  <label>
+    What's your email?
+    <input
+      placeholder="Password"
+      type="password"
+      name="password"
+      required
+      [(ngModel)]="register.password"
+    />
+    <span class="helper-text"> Error el campo password es requerido </span>
+  </label>
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+</form>

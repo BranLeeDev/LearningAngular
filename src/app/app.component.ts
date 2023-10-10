@@ -95,4 +95,14 @@ export class AppComponent {
       image: '../assets/images/glasses.jpg',
     },
   ];
+
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  };
+
+  onRegister() {
+    console.log(this.register);
+  }
 }
