@@ -46,3 +46,14 @@
 
 <p>Now, the name is {{ person.firstName }}</p>
 <input type="text" [value]="person.firstName" (keyup)="changeName($event)" />
+
+<!-- NG model -->
+
+<p>Here is the lastName => {{ person.lastName }}</p>
+<input
+  type="text"
+  [minlength]="10"
+  #lastNameInput="ngModel"
+  [(ngModel)]="person.lastName"
+/>
+<p>Valid: {{ lastNameInput.valid }}</p>
