@@ -10,3 +10,16 @@
     alt="Reference image of a T-shirt"
   />
 </figure>
+
+<!-- Property binding -->
+
+<h2>Property binding</h2>
+<button [disabled]="btnDisabled">Active button</button>
+<input type="text" [value]="name" />
+<progress max="100" [value]="age"></progress>
+<img [src]="img" alt="Reference image of a T-shirt" width="300" height="300" />
+<article>
+  <h3>His name is {{ person.firstName }}</h3>
+  <p>He has {{ person.age }}</p>
+  <p>He's from {{ person.country }}</p>
+</article>
