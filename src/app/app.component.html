@@ -23,3 +23,26 @@
   <p>He has {{ person.age }}</p>
   <p>He's from {{ person.country }}</p>
 </article>
+
+<!-- Event binding from Angular -->
+
+<button (click)="toggleButton()">Change disabled</button>
+<button (click)="increaseAge()">Increase Age</button>
+
+<!-- Other events -->
+
+<div class="box" (scroll)="onScroll($event)">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, voluptatem
+  dolorem? Ratione modi quam sunt incidunt illo? Magnam officia in doloribus
+  beatae obcaecati amet placeat aspernatur excepturi nemo, cupiditate
+  repellendus! Earum cupiditate veniam numquam ad ipsum illum fugiat est
+  sapiente accusamus natus? Deserunt beatae voluptates illum ratione neque
+  earum, saepe similique vel, illo libero, commodi non modi excepturi aspernatur
+  reiciendis. Similique quaerat, accusantium neque recusandae ullam quia omnis
+  pariatur impedit deserunt laudantium. Qui mollitia ipsa magnam magni
+  consequatur hic exercitationem natus! In et asperiores vel voluptate nobis
+  sint perspiciatis alias.
+</div>
+
+<p>Now, the name is {{ person.firstName }}</p>
+<input type="text" [value]="person.firstName" (keyup)="changeName($event)" />
