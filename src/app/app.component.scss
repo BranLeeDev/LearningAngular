@@ -22,3 +22,14 @@
   display: block;
   background-color: red;
 }
+
+.line-error {
+  height: 0;
+  border-bottom: 0.1em solid transparent;
+  &.invalid {
+    border-color: red;
+  }
+  &.valid {
+    border-color: green;
+  }
+}

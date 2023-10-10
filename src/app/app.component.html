@@ -121,5 +121,40 @@
   Italic font based in conditionals
 </p>
 
-<input type="text" [(ngModel)]="widthImg" />
+<input
+  type="text"
+  required
+  #inputWidthImage="ngModel"
+  minlength="3"
+  [(ngModel)]="widthImg"
+/>
 <img [src]="img" [style.width.px]="widthImg" alt="image" />
+
+<!-- Ng class -->
+<hr
+  class="line-error"
+  [ngClass]="{
+    valid: inputWidthImage.valid,
+    invalid: inputWidthImage.invalid
+  }"
+/>
+
+<!-- ngStyles -->
+
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width" />
+    <input type="number" [(ngModel)]="box.height" />
+    <input type="color" [(ngModel)]="box.background" />
+  </div>
+  <div>
+    <div
+      [ngStyle]="{
+        'width.px': box.width,
+        'height.px': box.height,
+        'background-color': box.background,
+        display: 'block'
+      }"
+    ></div>
+  </div>
+</div>
