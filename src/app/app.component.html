@@ -95,3 +95,12 @@
     </article>
   </li>
 </ul>
+
+<h3>[ngSwitch]</h3>
+<input type="text" [(ngModel)]="person.lastName" />
+<div [ngSwitch]="person.lastName">
+  <p *ngSwitchCase="'Brandon'">The person is Brandon</p>
+  <p *ngSwitchCase="'Kevin'">The person is Kevin</p>
+  <p *ngSwitchCase="'Italo'">The person is Italo</p>
+  <p *ngSwitchDefault>No hace match</p>
+</div>
