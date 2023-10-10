@@ -57,3 +57,10 @@
   [(ngModel)]="person.lastName"
 />
 <p>Valid: {{ lastNameInput.valid }}</p>
+
+<!-- Uso de *ngIf -->
+
+<p *ngIf="person.lastName === 'Brandon'; else elseBlock">My content</p>
+<ng-template #elseBlock>
+  <p>Block of else</p>
+</ng-template>
