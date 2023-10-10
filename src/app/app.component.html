@@ -83,7 +83,7 @@
 </div>
 
 <h3>*ngFor Objects</h3>
-<ul>
+<ul class="products">
   <li *ngFor="let pro of products">
     <article>
       <h4>{{ pro.name }}</h4>
@@ -97,10 +97,29 @@
 </ul>
 
 <h3>[ngSwitch]</h3>
-<input type="text" [(ngModel)]="person.lastName" />
+<input
+  type="text"
+  required
+  minlength="3"
+  #inputValueLastName="ngModel"
+  [(ngModel)]="person.lastName"
+/>
 <div [ngSwitch]="person.lastName">
   <p *ngSwitchCase="'Brandon'">The person is Brandon</p>
   <p *ngSwitchCase="'Kevin'">The person is Kevin</p>
   <p *ngSwitchCase="'Italo'">The person is Italo</p>
   <p *ngSwitchDefault>No hace match</p>
 </div>
+
+<p
+  class="paragraph-input-error"
+  [class.message-error]="inputValueLastName.invalid"
+>
+  You are errors
+</p>
+<p [style.font-style]="inputValueLastName.invalid ? 'italic' : 'normal'">
+  Italic font based in conditionals
+</p>
+
+<input type="text" [(ngModel)]="widthImg" />
+<img [src]="img" [style.width.px]="widthImg" alt="image" />

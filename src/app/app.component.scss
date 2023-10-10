@@ -4,3 +4,21 @@
   overflow: auto;
   background-color: red;
 }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 3em;
+  img {
+    width: 100%;
+  }
+}
+
+.paragraph-input-error {
+  display: none;
+}
+
+.message-error {
+  display: block;
+  background-color: red;
+}

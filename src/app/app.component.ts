@@ -54,6 +54,8 @@ export class AppComponent {
     this.names.splice(index, 1);
   }
 
+  widthImg: number = 10;
+
   products: Product[] = [
     {
       name: 'EL mejor juguete',
