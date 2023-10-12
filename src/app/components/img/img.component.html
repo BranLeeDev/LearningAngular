@@ -1,1 +1,18 @@
 <p>img works!</p>
+
+<img
+  [src]="img"
+  *ngIf="img; else elseImage"
+  width="200"
+  height="200"
+  alt="Reference image of an avatar"
+/>
+
+<ng-template #elseImage>
+  <img
+    src="/assets/images/toy.jpg"
+    width="200"
+    height="200"
+    alt="Reference image of a toy"
+  />
+</ng-template>
