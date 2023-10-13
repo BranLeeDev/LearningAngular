@@ -2,5 +2,9 @@
   <app-product
     *ngFor="let product of products"
     [product]="product"
+    (addedProduct)="onAddToShoppingCart($event)"
   ></app-product>
 </section>
+
+<p>La cantidad de productos que agregaste es {{ shoppingCart.length }}</p>
+<p>Todo esto te va a costar {{ total }}</p>

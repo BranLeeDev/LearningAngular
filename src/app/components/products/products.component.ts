@@ -8,4 +8,15 @@ import { Product } from 'src/app/models/product.model';
 })
 export class ProductsComponent {
   @Input() products!: Product[];
+
+  shoppingCart: Product[] = [];
+
+  total = 0;
+
+  onAddToShoppingCart(product: Product) {
+    this.shoppingCart.push(product);
+    this.total = this.shoppingCart.reduce((acc, cur) => {
+      return acc + cur.price;
+    }, 0);
+  }
 }
