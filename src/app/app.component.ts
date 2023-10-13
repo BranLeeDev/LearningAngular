@@ -9,6 +9,13 @@ import { Product } from './models/product.model';
 export class AppComponent {
   title = 'fundamentals';
   imgParent = '';
+  newValueInput = '';
+
+  showImg = true;
+
+  toggleImg() {
+    this.showImg = !this.showImg;
+  }
 
   onLoaded(img: string) {
     console.log('Log padre', img);
