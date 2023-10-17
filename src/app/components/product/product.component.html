@@ -1,6 +1,6 @@
 <article>
-  <app-img [img]="product.image"></app-img>
-  <h2>{{ product.name }}</h2>
+  <app-img [img]="product.images[0]"></app-img>
+  <h2>{{ product.title }}</h2>
   <p>${{ product.price }}</p>
   <button (click)="onAddToCart()">Added to cart</button>
 </article>
