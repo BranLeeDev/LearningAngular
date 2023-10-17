@@ -14,4 +14,8 @@ export class ProductComponent {
   onAddToCart() {
     this.addedProduct.emit(this.product);
   }
+
+  today = new Date();
+
+  date = new Date(2021, 1, 21);
 }

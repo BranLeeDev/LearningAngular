@@ -1,6 +1,10 @@
 <article>
   <app-img [img]="product.images[0]"></app-img>
   <h2>{{ product.title }}</h2>
-  <p>${{ product.price }}</p>
+  <p>{{ product.price | currency : "$" }}</p>
+  <p>Today: {{ today | date : "mediumDate" }}</p>
+  <p>Greeting {{ "hELo!" | titlecase }}</p>
+  <p>Voltear text {{ "Game" | reverse }}</p>
+  <p>The last time is {{ today | timesAgo }}</p>
   <button (click)="onAddToCart()">Added to cart</button>
 </article>
