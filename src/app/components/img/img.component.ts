@@ -18,8 +18,9 @@ import {
 export class ImgComponent
   implements OnInit, OnChanges, AfterViewInit, OnDestroy
 {
-  img: string = '';
+  img = '';
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('img')
   set changeImg(newImg: string) {
     this.img = newImg;
@@ -28,9 +29,9 @@ export class ImgComponent
 
   @Output() loaded = new EventEmitter<string>();
 
-  createdNewInput: string = '';
+  createdNewInput = '';
 
-  counter: number = 0;
+  counter = 0;
   counterFn: number | undefined;
 
   constructor() {

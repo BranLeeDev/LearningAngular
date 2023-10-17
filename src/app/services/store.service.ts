@@ -25,6 +25,4 @@ export class StoreService {
       return acc + cur.price;
     }, 0);
   }
-
-  constructor() {}
 }

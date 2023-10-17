@@ -5,8 +5,14 @@
   *ngIf="img; else elseImage"
   width="200"
   height="200"
+  alt="This is a description of image"
 />
 
 <ng-template #elseImage>
-  <img [src]="imageDefault" width="200" height="200" />
+  <img
+    [src]="imageDefault"
+    alt="This is a text alternative"
+    width="200"
+    height="200"
+  />
 </ng-template>
