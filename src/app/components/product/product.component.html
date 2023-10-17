@@ -6,5 +6,6 @@
   <p>Greeting {{ "hELo!" | titlecase }}</p>
   <p>Voltear text {{ "Game" | reverse }}</p>
   <p>The last time is {{ today | timesAgo }}</p>
+  <p appHighlight>{{ product.description }}</p>
   <button (click)="onAddToCart()">Added to cart</button>
 </article>
